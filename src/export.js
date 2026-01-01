@@ -16,6 +16,12 @@ import client3 from "../src/assets/client3.png";
 
 export const allservices = [
   {
+    icon: paint,
+    title: "Interior Design",
+    about:
+      "Creative interior design services to craft comfortable and visually stunning spaces that reflect individual style.",
+  },
+  {
     icon: building,
     title: "Building Renovation",
     about:
@@ -26,6 +32,12 @@ export const allservices = [
     title: "Construction Services",
     about:
       "Comprehensive construction solutions, from project planning to execution, ensuring high-quality and timely completion.",
+  },
+  {
+    icon: support,
+    title: "Customer Support",
+    about:
+      "Dedicated customer support to assist with inquiries, provide updates, and ensure a smooth project experience from start to finish.",
   },
   {
     icon: design,
@@ -39,70 +51,55 @@ export const allservices = [
     about:
       "Detailed documentation for all project stages, providing clear records and ensuring compliance with industry standards.",
   },
-  {
-    icon: paint,
-    title: "Interior Design",
-    about:
-      "Creative interior design services to craft comfortable and visually stunning spaces that reflect individual style.",
-  },
-  {
-    icon: support,
-    title: "Customer Support",
-    about:
-      "Dedicated customer support to assist with inquiries, provide updates, and ensure a smooth project experience from start to finish.",
-  },
 ];
-
 
 export const planning = [
   {
     icon: IoDocumentTextSharp,
     title: "Planning",
     about:
-      "Detailed research and strategizing to establish project goals, requirements, and timelines for a successful outcome.",
+      "Understanding client requirements, budgets, timelines, and space purpose to plan both construction and interior execution clearly.",
   },
   {
     icon: MdOutlineDesignServices,
     title: "Design",
     about:
-      "Crafting user-centered designs, wireframes, and mockups to create a visually appealing and functional interface.",
+      "Creating architectural plans, interior layouts, material selections, and 3D visuals for a cohesive outcome.",
   },
   {
     icon: FaRegBuilding,
     title: "Building",
     about:
-      "Developing the core functionalities and implementing features with clean, efficient code to bring the design to life.",
+      "Carrying out construction and interior works with skilled teams, quality materials, and strict supervision.",
   },
   {
     icon: FaSitemap,
     title: "Finish",
     about:
-      "Thorough testing, debugging, and deployment to ensure the project meets all specifications and functions seamlessly.",
+      "Final inspections, detailing, and handover ensuring the space is functional, refined, and ready for use.",
   },
 ];
-
 
 export const clients = [
   {
     image: client1,
-    name: "Alex Parker",
+    name: "Mohan T S",
     about:
-      "An experienced constructor known for meticulous planning and project management, ensuring every construction project meets quality standards and deadlines.",
-    post: "Constructor",
+      "Craftify transformed our home beautifully. Excellent interior quality, timely delivery, and very professional team. Truly value for money.",
+    location: "Mylapore",
   },
   {
     image: client2,
-    name: "Drew James",
+    name: "Arokkiyaraj",
     about:
-      "A visionary architect who blends modern design with sustainable practices to create innovative, environmentally friendly buildings.",
-    post: "Architect",
+      "From design to execution, Craftify handled everything smoothly. Our flat interiors look elegant and well-planned. Highly recommended.",
+    location: "Madipakkam",
   },
   {
     image: client3,
-    name: "Sam Peterson",
+    name: "Samson",
     about:
-      "A skilled builder with a strong focus on craftsmanship and attention to detail, dedicated to bringing architectural designs to life with precision.",
-    post: "Builder",
+      "Very satisfied with Craftify’s interior work. Good materials, transparent pricing, and regular updates throughout the project.",
+    location: "Egmore",
   },
 ];
-
