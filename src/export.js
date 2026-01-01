@@ -83,21 +83,21 @@ export const planning = [
 export const clients = [
   {
     image: client1,
-    name: "Mohan T S",
+    name: "Akash",
     about:
       "Craftify transformed our home beautifully. Excellent interior quality, timely delivery, and very professional team. Truly value for money.",
-    location: "Mylapore",
+    location: "Tondiarpet",
   },
   {
     image: client2,
-    name: "Arokkiyaraj",
+    name: "Chandrasekar",
     about:
       "From design to execution, Craftify handled everything smoothly. Our flat interiors look elegant and well-planned. Highly recommended.",
     location: "Madipakkam",
   },
   {
     image: client3,
-    name: "Samson",
+    name: "C. K. Suthanthiram",
     about:
       "Very satisfied with Craftify’s interior work. Good materials, transparent pricing, and regular updates throughout the project.",
     location: "Egmore",

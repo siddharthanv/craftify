@@ -24,7 +24,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-0 top-0 z-50">
+    <nav className="w-full fixed flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-0 top-0 z-50">
       <Link
         to="home"
         smooth={true}
@@ -34,7 +34,7 @@ const Header = () => {
         <img
           src={Craftify_Logo}
           alt="Craftify Interiors and Constructions Logo"
-          className="h-[60px] md:h-[90px] w-auto object-contain"
+          className="h-[65px] md:h-[90px] w-auto object-contain"
         />
       </Link>
       {/* Desktop Menu */}
@@ -61,7 +61,7 @@ const Header = () => {
 
       {/* Mobile Menu Toggle Icon */}
       <div
-        className="flex justify-between items-center lg:hidden mt-3"
+        className="flex justify-between items-center lg:hidden"
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
@@ -75,7 +75,7 @@ const Header = () => {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } w-full h-fit bg-yellow-500 p-4 absolute top-[72px] left-0`}
+        } w-full h-fit bg-yellow-500 p-4 absolute top-[68px] left-0`}
         onClick={closeMenu}
       >
         <ul className="flex flex-col justify-center items-center gap-2 w-full">
@@ -92,6 +92,13 @@ const Header = () => {
               </Link>
             </li>
           ))}
+          <li className="mt-3">
+            <a href="tel:+917871113091">
+              <button className="bg-black text-white px-6 py-3 rounded-full font-semibold w-full">
+                CALL US
+              </button>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

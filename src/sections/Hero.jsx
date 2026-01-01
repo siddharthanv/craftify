@@ -3,12 +3,13 @@ import heroimg from "../assets/building.png";
 import backgroundImg from "../assets/interior_design.webp";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
     <div
       id="hero"
-      className="relative w-full lg:h-[700px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[150px] px-[20px] flex justify-between items-center lg:flex-row flex-col lg:gap-5 gap-[50px] bg-cover bg-center"
+      className="relative w-full lg:h-[725px] h-fit m-auto pt-[100px] lg:pt-[50px] lg:px-[150px] px-[20px] flex justify-between items-center lg:flex-row flex-col lg:gap-5 gap-[50px] bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImg})` }}
     >
       {/* 🔥 Dark Overlay */}
@@ -55,20 +56,22 @@ const Hero = () => {
             variants={zoomInVariants}
             className="bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg text-black font-bold transition"
           >
-            GET FREE QUOTE
+            <Link to="contact" spy={true} offset={-100} smooth={true}>
+              GET FREE QUOTE
+            </Link>
           </motion.button>
 
           <motion.button
             variants={zoomInVariants}
             className="border-white hover:border-yellow-500 hover:text-yellow-500 border-2 px-10 py-3 rounded-lg text-white font-bold transition"
           >
-            KNOW MORE
+            <a href="tel:+917871113091">CALL US</a>
           </motion.button>
         </motion.div>
       </motion.div>
 
       {/* Image */}
-      <div className="relative z-10 w-[40%] flex justify-end">
+      <div className="relative z-10 w-[70%] lg:w-[40%] flex justify-end">
         <motion.img
           initial="hidden"
           whileInView="visible"

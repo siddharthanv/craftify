@@ -21,7 +21,7 @@ const Footer = () => {
         {/* Links */}
         <div className="flex gap-6 mt-4 md:mt-0">
           <a
-            href="https://github.com/sumu9897"
+            href="https://www.instagram.com/craftify_space/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-500 transition-colors duration-300"
@@ -29,7 +29,7 @@ const Footer = () => {
             <FaFacebook size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/md-sumon9897"
+            href="https://www.instagram.com/craftify_space/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-500 transition-colors duration-300"
@@ -37,7 +37,9 @@ const Footer = () => {
             <FaInstagram size={24} />
           </a>
           <a
-            href="mailto:mohammad.sumon9897@gmail.com"
+            href="https://wa.me/7871113091"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-yellow-500 transition-colors duration-300"
           >
             <FaWhatsapp size={24} />

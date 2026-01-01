@@ -112,7 +112,17 @@ const Contact = () => {
             </div>
             <h4 className="text-xl font-bold text-white uppercase">Phone</h4>
             <p className="text-gray-300 text-lg">
-              +91 78711 13091 | +91 98846 89275 | +91 97101 77205
+              <a href="tel:+917871113091" className="hover:underline">
+                +91 78711 13091
+              </a>{" "}
+              |{" "}
+              <a href="tel:+919884689275" className="hover:underline">
+                +91 98846 89275
+              </a>{" "}
+              |{" "}
+              <a href="tel:+919710177205" className="hover:underline">
+                +91 97101 77205
+              </a>
             </p>
           </div>
 
@@ -122,7 +132,14 @@ const Contact = () => {
               ✉️
             </div>
             <h4 className="text-xl font-bold text-white uppercase">Email</h4>
-            <p className="text-gray-300 text-lg">craftifyprojects@gmail.com</p>
+            <p className="text-gray-300 text-lg">
+              <a
+                href="mailto:craftifyprojects@gmail.com"
+                className="cursor-pointer"
+              >
+                craftifyprojects@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </motion.div>

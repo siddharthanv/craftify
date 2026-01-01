@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
+import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -55,7 +56,9 @@ const About = () => {
           className="bg-yellow-500 hover:bg-white  text-white hover:text-black py-3 px-10 rounded-md hover:bg-yellow
                 -600 transition duration-300 font-bold"
         >
-          View Portfolio
+          <Link to="projects" spy={true} offset={-100} smooth={true}>
+            View Portfolio
+          </Link>
         </motion.button>
       </motion.div>
     </div>
