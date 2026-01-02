@@ -1,8 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    location: "",
+    mobile: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbxkd2w5DujmtDBwKHdLlGOoQ0zu4sYImRwZS499wGUhkcByVcdZrGA2BJwF6XlFR-Fpqw/exec",
+        {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const result = await res.json();
+      alert("Form submitted successfully!");
+
+      setFormData({
+        name: "",
+        location: "",
+        mobile: "",
+        message: "",
+      });
+    } catch (error) {
+      alert("Submission failed");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div id="contact" className="bg-white w-full">
       {/* TOP SECTION */}
@@ -45,6 +93,8 @@ const Contact = () => {
           className="lg:w-[45%] w-full"
         >
           <motion.form
+            onSubmit={handleSubmit}
+            autoComplete="on"
             initial="hidden"
             whileInView="visible"
             variants={zoomInVariants}
@@ -52,34 +102,55 @@ const Contact = () => {
           >
             <input
               type="text"
+              name="name"
+              autoComplete="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Enter Full Name"
               className="px-6 py-3 border-2 border-black rounded-lg w-full"
             />
 
             <input
               type="text"
+              name="location"
+              autoComplete="address"
+              value={formData.location}
+              onChange={handleChange}
               placeholder="Enter Your Location"
               className="px-6 py-3 border-2 border-black rounded-lg w-full"
             />
 
             <input
-              type="number"
+              type="tel"
+              name="mobile"
+              autoComplete="tel"
+              value={formData.mobile}
+              onChange={handleChange}
               placeholder="Enter Mobile Number"
               className="px-6 py-3 border-2 border-black rounded-lg w-full"
             />
 
             <textarea
               rows="4"
+              name="message"
+              autoComplete="off"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your Message"
               className="px-6 py-3 border-2 border-black rounded-lg w-full"
             />
 
             <motion.button
+              type="submit"
+              disabled={isSubmitting}
               variants={zoomInVariants}
-              className="bg-yellow-500 hover:bg-black text-black hover:text-white 
-              font-bold py-4 rounded-lg transition-all duration-300"
+              className={`font-bold py-4 rounded-lg transition-all duration-300 ${
+                isSubmitting
+                  ? "bg-gray-400 text-white cursor-not-allowed"
+                  : "bg-yellow-500 hover:bg-black text-black hover:text-white"
+              }`}
             >
-              SUBMIT REQUEST
+              {isSubmitting ? "SUBMITTING..." : "SUBMIT REQUEST"}
             </motion.button>
           </motion.form>
         </motion.div>
