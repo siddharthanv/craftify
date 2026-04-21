@@ -36,7 +36,7 @@ const Portfolio = () => {
           variants={zoomInVariants}
           className="w-[120px] h-[6px] bg-yellow-500"
         ></motion.div>
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           variants={zoomInVariants}
@@ -50,7 +50,7 @@ const Portfolio = () => {
           <img src={project6} alt="" className="h-[250px] w-full" />
           <img src={project7} alt="" className="h-[250px] w-full" />
           <img src={project8} alt="" className="h-[250px] w-full" />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </div>
   );
